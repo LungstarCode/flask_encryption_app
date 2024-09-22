@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decrypt Text</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f9fc;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            color: #04113F;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .card-header {
+            background-color: #04113F;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #04113F;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0033A0;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Decrypt Your Text</h1>
+        <div class="card">
+            <div class="card-header">Enter encrypted text to decrypt</div>
+            <div class="card-body">
+                <form action="/decrypt_text" method="POST">
+                    <div class="mb-3">
+                        <label for="ciphertext" class="form-label">Encrypted Text (Hex):</label>
+                        <textarea class="form-control" name="ciphertext" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" class="form-control" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Decrypt Text</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Encryption App by CyberGuards</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
